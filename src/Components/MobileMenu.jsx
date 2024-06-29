@@ -12,7 +12,7 @@ const MobileMenu = () => {
     <div>
         {
             openMenu ? (
-            <div className={`flex flex-col md:hidden items-center h-screen py-10 px-20 absolute bg-white z-20 left-0`}>
+            <div className={`flex flex-col md:hidden items-center h-screen py-10 px-20 absolute bg-white z-20 left-0 w-[80%]`}>
                 <i className='bx bx-x cursor-pointer text-2xl' onClick={() => { setOpenMenu(!openMenu) }}></i>
                 <div className="flex flex-col gap-10 items-center mt-20 font-bold">
                 {
