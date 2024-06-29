@@ -56,11 +56,11 @@ const Cart = () => {
                     <hr className="h-[2px] bg-gray-400 mt-10 mb-10 max-md:mt-5 max-md:mb-5"/>
                     <div className="flex items-center justify-between">
                         <p className="font-bold">Total</p>
-                        <p className="max-md:text-sm font-bold">${totalAmount ? totalAmount : '$0'}</p>
+                        <p className="max-md:text-sm font-bold">${totalAmount ? totalAmount : '0'}</p>
                     </div>
                     <hr className="h-[2px] bg-gray-400 mt-10 mb-10 max-md:mt-5 max-md:mb-5"/>
                     <Link className="w-full bg-green-600 hover:opacity-40 transition-all text-white font-bold py-4 rounded-full md:mb-4 text-center
-                    max-md:py-2 max-md:text-sm">
+                    max-md:py-2 max-md:text-sm" to="/checkout">
                         Checkout
                     </Link>
                 </div>
