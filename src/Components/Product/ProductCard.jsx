@@ -34,7 +34,7 @@ const ProductCard = ({src="https://i.ibb.co/VST6MdH/Blue-Black-Minimalist-Modern
   }
 
   return (
-    <div className="px-4 pt-4 pb-8 max-md:px-3 max-md:pt-3 max-md:pb-5 flex flex-col bg-white rounded-xl w-[400px] max-md:w-[80%] items-center border shadow-2xl cursor-pointer">
+    <div className="px-4 pt-4 pb-8 max-md:px-3 max-md:pt-3 max-md:pb-5 flex flex-col bg-white rounded-xl w-[400px] max-md:w-[90%] items-center border shadow-2xl cursor-pointer">
         <div className="flex justify-between items-center w-full">
             <div>
               {
