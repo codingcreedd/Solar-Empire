@@ -60,7 +60,7 @@ const Footer = () => {
             <div className="flex flex-col gap-4">
                 <div className="flex gap-2">
                     <input type="email" className="outline-none rounded-full bg-transparent border px-4 max-md:px-2" />
-                    <button className="px-5 py-2 font-bold text-white bg-green-400 rounded-full">Subscribe</button>
+                    <button className="px-5 py-2 font-bold text-white bg-green-400 rounded-full max-md:px-2 max-md:py-1 max-md:text-sm">Subscribe</button>
                 </div>
                 
                 <p className="w-[500px] text-[0.8rem] max-md:max-w-[99%]">By submitting your email address, you agree to receive Solar Empire's newlestter. For more information, contact us on Whatsapp: +961 76 490 249 or +961 79 174 386</p>
