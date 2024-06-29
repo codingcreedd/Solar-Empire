@@ -1,10 +1,12 @@
 import Deals from "./FixedLayouts/Deals"
 import Footer from "./FixedLayouts/Footer"
 import Nav from "./FixedLayouts/Nav"
+import MobileMenu from "./MobileMenu"
 
 const Contact = () => {
   return (
     <div className="flex flex-col items-center">
+        <MobileMenu />
         <Deals />
         <Nav />
         <div className="flex-grow flex flex-col mt-40">

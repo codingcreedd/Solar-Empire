@@ -2,6 +2,9 @@ import Deals from "./FixedLayouts/Deals"
 import Nav from "./FixedLayouts/Nav"
 import Footer from "./FixedLayouts/Footer"
 import products from "../products"
+import { useContext } from "react"
+import { Context } from "./Context"
+import MobileMenu from "./MobileMenu"
 
 const Pricing = () => {
   const productsInTable = [
@@ -13,8 +16,12 @@ const Pricing = () => {
     (product) =>!productsInTable.some((p) => p.name === product.name)
   )
 
+  const {setOpenMenu} = useContext(Context);
+
+
   return (
     <div className="flex flex-col items-center">
+      <MobileMenu />
       <Deals />
       <Nav />
       <div className="flex-grow flex flex-col mt-40 items-center max-md:mt-24 max-md:px-14">

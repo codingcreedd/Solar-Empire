@@ -5,11 +5,13 @@ const ContextProvider = ({children}) => {
     const [cartCount, setCartCount] = useState(0);
     const [cart, setCart] = useState([]);
     const [totalAmount, setTotalAmount] = useState(0);
+    const [openMenu, setOpenMenu] = useState(false);
 
     const states = {
         cartCount, setCartCount,
         cart, setCart,
-        totalAmount, setTotalAmount
+        totalAmount, setTotalAmount,
+        openMenu, setOpenMenu
     }
 
   return (
