@@ -10,7 +10,7 @@ const Nav = () => {
     const {cartCount, cart} = useContext(Context);
 
   return (
-    <nav className="px-80 flex justify-between items-center py-4 max-md:py-2 fixed mt-7 md:mt-10 md:shadow-2xl md:mx-8 md:rounded-lg z-10 bg-white max-md:px-10 max-md:w-full">
+    <nav className="px-80 flex justify-between items-center py-4 max-md:py-2 fixed md:mt-10 md:shadow-2xl md:mx-8 md:rounded-lg z-10 bg-white max-md:px-10 max-md:w-full max-md:sticky max-md:top-0">
         <i class='bx bx-menu md:hidden'></i>
         <img src='https://i.ibb.co/db9qbJh/solarempirelogo.jpg' alt="" border="0" className="w-[3%] max-md:w-[20px] cursor-pointer" />
         <div className='flex gap-10 max-md:hidden'>
