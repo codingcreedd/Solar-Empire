@@ -2,7 +2,7 @@ import { useCallback, useContext, useMemo, useState } from "react"
 import AddToCartBtn from "../Cart/AddToCartBtn"
 import { Context } from "../Context";
 
-const ProductCard = ({src="https://i.ibb.co/VST6MdH/Blue-Black-Minimalist-Modern-New-Collection-Backpack-Promotion-Instagram-Post-3.png", name, description, unitPrice, lastPrice, wholesalePrice,  tag, outOfStock}) => {
+const ProductCard = ({src, name, description, unitPrice, lastPrice, wholesalePrice,  tag, outOfStock}) => {
 
   const [count, setCount] = useState(0);
   const {cart, setCart, totalAmount, setTotalAmount} = useContext(Context);
