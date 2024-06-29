@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import AddToCartBtn from "../Cart/AddToCartBtn";
-
+import { Context } from "../Context";
 export const Element = ({title, children}) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +26,35 @@ export const Element = ({title, children}) => {
 }
 
 
-const Product = ({img, name, price, title, lastPrice}) => {
+const Product = ({src, name, description, unitPrice, lastPrice, wholesalePrice, tag, outOfStock, title}) => {
+    const [count, setCount] = useState(0);
+    const {cart, setCart, totalAmount, setTotalAmount} = useContext(Context);
 
-    const [imgNum, setImgNum] = useState(1);
+    const handleAddToCart = () => {
+        if (count > 0) {
+        const existingProductIndex = cart.findIndex((product) => product.name === name);
+        let newCart;
+        let newTotalAmount = totalAmount;
+
+        if (existingProductIndex > -1) {
+            newCart = [...cart];
+            const existingProduct = newCart[existingProductIndex];
+            newTotalAmount += (count * unitPrice);
+            existingProduct.qty += count;
+        } else {
+
+            const newProduct = {
+            src, name, description, unitPrice, lastPrice, wholesalePrice, tag, outOfStock, qty: count
+            };
+            newCart = [...cart, newProduct];
+            newTotalAmount += (count * unitPrice);
+        }
+
+        setCart(newCart);
+        setTotalAmount(newTotalAmount);
+        setCount(0);
+        }
+    }
 
   return (
     <div className="flex flex-col gap-10">
@@ -39,14 +65,14 @@ const Product = ({img, name, price, title, lastPrice}) => {
             null
         }
         <div className="flex justify-center gap-20 max-md:gap-6 max-md:flex-col max-md:mx-4 max-md:items-center">
-            <img src={img} alt="Blue-Black-Minimalist-Modern-New-Collection-Backpack-Promotion-Instagram-Post-3" border="0" className="w-[600px] rounded-lg max-md:w-[90%]" />
+            <img src={src} alt="Blue-Black-Minimalist-Modern-New-Collection-Backpack-Promotion-Instagram-Post-3" border="0" className="w-[600px] rounded-lg max-md:w-[90%]" />
             
             <div className="flex flex-col w-[40%] max-md:w-full">
                 <h1 className="text-4xl font-bold md:max-w-[70%] max-md:w-full max-md:text-2xl">{name}</h1>
                 <p className="text-lg mt-3 text-gray-400 font-bold max-md:text-sm">Feel the Fresh Air without electricity!</p>
 
                 <div className="flex items-center gap-3 mt-4">
-                    <p className="font-bold text-green-600 text-lg max-md:text-sm">${price}</p>
+                    <p className="font-bold text-green-600 text-lg max-md:text-sm">${unitPrice}</p>
                     <p className="text-gray-500 font-bold text-lg line-through max-md:text-sm">${lastPrice}</p>
                     <div className="text-center text-white bg-green-600 rounded-lg px-2 font-bold text-sm">
                         Free Delivery
@@ -68,8 +94,19 @@ const Product = ({img, name, price, title, lastPrice}) => {
                     <i className='bx bxs-heart text-2xl text-green-600 max-md:text-sm'></i>
                     <p className="max-md:text-sm">Free Delivery</p>
                 </div>
+
+                <div className="flex items-center justify-center gap-4 mt-10 max-md:mt-5">
+                    <button className="px-5 font-bold py-2 rounded-full bg-green-300 max-md:px-3 max-md:py-1" onClick={() => {if(count >= 1){setCount(count - 1)}}}>
+                        -
+                    </button>
+                    <p>{count}</p>
+                    <button className="px-5 font-bold py-2 rounded-full bg-green-300 max-md:px-3 max-md:py-1" onClick={() => {setCount(count + 1)}}>
+                        +
+                    </button>
+                </div>
+
                 
-                <AddToCartBtn />
+                <AddToCartBtn qty={count} onClick={() => {handleAddToCart()}}/>
                 <p className="font-bold mt-4 text-center max-md:text-sm">Cash on Delivery</p>
 
                 <div className="flex flex-col mt-10 max-md:mt-5">
