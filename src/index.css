@@ -21,3 +21,13 @@ body{
 .listElement:hover::after{
     width: 100%;
 }
+
+:root {
+    --theme: light; 
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --theme: light;
+    }
+  }

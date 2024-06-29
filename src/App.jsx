@@ -10,7 +10,7 @@ function App() {
   const { openMenu, setOpenMenu } = useContext(Context);
   
   return (
-    <div className="flex flex-col relative">
+    <div className={`flex flex-col relative app ${getComputedStyle(document.documentElement).getPropertyValue('--theme') === 'light' ? 'light-mode' : 'dark-mode'}`}>
       <MobileMenu />
       <div className={`${openMenu && 'blur-sm pointer-events-none'}`}>
         <Deals />
