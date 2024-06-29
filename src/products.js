@@ -15,7 +15,7 @@ const products = [
         name: 'Mini Solar Fan',
         unitPrice: 22,
         wholesalePrice: 18,
-        lastPrice: 26,
+        lastPrice: 35,
         specs: ["Speeds: 4", "Light: Available", "Portable: Yes", "Battery: Ternary lithium battery 12000mah", "Solar Panel: 6V 16W Polysilicon Panel",
         "Working Time: 3~4.5hours", "Charge Time: 1~2.5hours"],
         src: '',
