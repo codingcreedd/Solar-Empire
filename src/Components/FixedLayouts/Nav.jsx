@@ -21,7 +21,9 @@ const Nav = () => {
         </div>
 
         <div className='relative'>
-            <i className='bx bx-shopping-bag text-2xl cursor-pointer'></i>
+            <Link to="/cart">
+                <i className='bx bx-shopping-bag text-2xl cursor-pointer'></i>
+            </Link>
             <p className={`absolute -top-3 -right-2 font-bold ${cart.length < 1 && 'text-red-600'}`}>{cart.length}</p>
         </div>
     </nav>
