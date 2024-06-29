@@ -9,7 +9,7 @@ const Hero = () => {
       <img src="https://i.ibb.co/59jJ31v/hero-Banner.jpg" alt="hero-Banner" border="0" className="w-full" />
       <div className="text-center flex flex-col mt-10 items-center gap-6">
         <h1 className="text-4xl font-bold text-green-600 max-md:text-2xl">Welcome to Solar Empire <sup className="text-md max-md:text-sm">TM</sup></h1>
-        <p className="md:max-w-[50%] max-md:w-[90%]">Our mission is to empower your home with reliable and sustainable energy solutions, alleviating 
+        <p className="md:max-w-[50%] max-md:w-[90%] max-md:text-sm">Our mission is to empower your home with reliable and sustainable energy solutions, alleviating 
           the frustration of electricity shortages in Lebanon. Our innovative solar power fans are designed 
           to provide a breath of fresh air, literally! By harnessing the power of the sun, our fans ensure a 
           consistent and eco-friendly cooling experience, while reducing your reliance on the grid.</p>
