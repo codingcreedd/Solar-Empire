@@ -34,7 +34,7 @@ const ProductCard = ({src="https://i.ibb.co/VST6MdH/Blue-Black-Minimalist-Modern
   }
 
   return (
-    <div className="px-4 pt-4 pb-8 flex flex-col bg-white rounded-xl w-[400px] items-center border shadow-2xl cursor-pointer">
+    <div className="px-4 pt-4 pb-8 max-md:px-3 max-md:pt-3 max-md:pb-5 flex flex-col bg-white rounded-xl w-[400px] max-md:w-[80%] items-center border shadow-2xl cursor-pointer">
         <div className="flex justify-between items-center w-full">
             <div>
               {
@@ -44,30 +44,30 @@ const ProductCard = ({src="https://i.ibb.co/VST6MdH/Blue-Black-Minimalist-Modern
               }
             </div>
 
-            <i className='bx bx-bookmark text-2xl'></i>
+            <i className='bx bx-bookmark text-2xl max-md:text-lg'></i>
         </div>
 
-        <img src={src} alt="Product Card" border="0" className="w-full mt-3 mb-10 rounded-lg"/>
+        <img src={src} alt="Product Card" border="0" className="w-full mt-3 mb-10 rounded-lg max-md:mb-5"/>
 
-        <h1 className="font-bold text-2xl mb-5">{name}</h1>
+        <h1 className="font-bold text-2xl mb-5 max-md:text-lg max-md:mb-3">{name}</h1>
 
         <p className="text-gray-400 text-sm">{description}</p>
 
-        <div className="flex items-center gap-5">
-          <p className="font-bold text-2xl">${unitPrice}</p>
-          <p className="text-gray-500 line-through text-xl">${lastPrice}</p>
+        <div className="flex items-center gap-5 max-md:gap-3">
+          <p className="font-bold text-2xl max-md:text-lg">${unitPrice}</p>
+          <p className="text-gray-500 line-through text-xl max-md:text-sm">${lastPrice}</p>
         </div>
 
-        <div className="w-full border border-green-600 text-center mt-4 py-3 rounded-lg">
+        <div className="w-full border border-green-600 text-center mt-4 py-3 rounded-lg max-md:mt-3 max-md:py-2 max-md:text-sm">
             Wholesale Price: ${wholesalePrice}
         </div>
         
-        <div className="flex items-center gap-4 mt-10">
-              <button className="px-5 font-bold py-2 rounded-full bg-green-300" onClick={() => {if(count >= 1){setCount(count - 1)}}}>
+        <div className="flex items-center gap-4 mt-10 max-md:mt-5">
+              <button className="px-5 font-bold py-2 rounded-full bg-green-300 max-md:px-3 max-md:py-1" onClick={() => {if(count >= 1){setCount(count - 1)}}}>
                 -
               </button>
               <p>{count}</p>
-              <button className="px-5 font-bold py-2 rounded-full bg-green-300" onClick={() => {setCount(count + 1)}}>
+              <button className="px-5 font-bold py-2 rounded-full bg-green-300 max-md:px-3 max-md:py-1" onClick={() => {setCount(count + 1)}}>
                 +
               </button>
         </div>

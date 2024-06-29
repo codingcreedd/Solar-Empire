@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="flex flex-wrap justify-center items-center gap-4">
         {
           products.map(product => (
-            <ProductCard key={uuid()} name={product?.name} tag={<div className="px-2 py-1 bg-green-600 text-white rounded-full text-sm">Free Delivery</div>}
+            <ProductCard key={uuid()} name={product?.name} tag={<div className="px-2 py-1 bg-green-600 text-white rounded-full text-sm max-md:text-[0.8rem] max-md:py-0">Free Delivery</div>}
             unitPrice={product.unitPrice} lastPrice={product.lastPrice} wholesalePrice={product.wholesalePrice} outOfStock={product.outOfStock}/>
           ))
         }
