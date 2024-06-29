@@ -75,14 +75,14 @@ const Product = ({img, name, price, title, lastPrice}) => {
                 <div className="flex flex-col mt-10 max-md:mt-5">
                     <Element title="Returns">
                         <div className="flex gap-4">
-                            <div className="w-[5px] max-md:w-[3px] bg-green-600"></div>
+                            <div className="w-[5px] bg-green-600"></div>
                             <p className="text-sm max-md:text-[0.8rem]">We'll replace any damaged or defective parts, including broken components and non-functional batteries, if reported within [timeframe, e.g., 30 days] of delivery. Contact us on Whatsapp for issues like this.</p>
                         </div>
                     </Element>
 
                     <Element title="Specifications">
                         <div className="flex gap-4 text-sm">
-                            <div className="w-[5px] max-md:w-[3px] bg-green-600"></div>
+                            <div className="w-[5px] bg-green-600"></div>
                             <div className="flex flex-col max-md:text-[0.8rem]">
                                 <h1 className="text-2xl font-bold text-center max-md:text-lg">Solar Fan</h1>
                                 <p>Power: 25W</p>
@@ -101,7 +101,7 @@ const Product = ({img, name, price, title, lastPrice}) => {
 
                     <Element title="Shipping Details">
                     <div className="flex gap-4 text-sm">
-                            <div className="w-[5px] max-md:w-[3px] bg-green-600"></div>
+                            <div className="w-[5px] bg-green-600"></div>
                             <p className="max-md:text-[0.8rem]">Shipping is FREE all over Lebanon, you'll pay the shipping agent when they arrive (Cash on Delivery) </p>
                         </div>
                     </Element>
