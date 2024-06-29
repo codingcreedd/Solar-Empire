@@ -7,3 +7,17 @@ body{
     min-height: 100vh;
     list-style: none;
 }
+
+.listElement::after{
+    content: '';
+    height: 3px;
+    background: #16a34a;
+    width: 0%;
+    display: block;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+.listElement:hover::after{
+    width: 100%;
+}
