@@ -14,7 +14,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-6 max-md:gap-2 max-md:mb-5 max-md:ml-auto">
-                <h1 className="text-2xl font-bold max-md:text-lg">Products</h1>
+                <h1 className="md:text-2xl font-bold">Products</h1>
                 <p className="max-md:text-sm">Solar Fans</p>
                 <p className="max-md:text-sm">Small Office Fans</p>
                 <p className="max-md:text-sm">Neon Lights</p>
@@ -22,13 +22,13 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-6 max-md:gap-2 max-md:mt-5">
-                <h1 className="text-2xl font-bold max-md:text-lg">Tools</h1>
+                <h1 className="md:text-2xl font-bold">Tools</h1>
                 <p className="max-md:text-sm">Pricing</p>
                 <p className="max-md:text-sm">Product Description</p>
             </div>
 
             <div className="flex flex-col gap-6 max-md:gap-2 max-md:ml-auto max-md:mt-5">
-                <h1 className="text-2xl font-bold max-md:text-lg">Contact Us</h1>
+                <h1 className="md:text-2xl font-bold">Contact Us</h1>
 
                 <div className="flex items-center gap-4 max-md:gap-2">
                   <i className='bx bxl-whatsapp text-2xl max-md:text-sm'></i>
