@@ -13,7 +13,7 @@ const products = [
     },
     {
         name: 'Mini Solar Fan',
-        unitPrice: 22,
+        unitPrice: 20,
         wholesalePrice: 18,
         lastPrice: 35,
         specs: ["Speeds: 4", "Light: Available", "Portable: Yes", "Battery: Ternary lithium battery 12000mah", "Solar Panel: 6V 16W Polysilicon Panel",
