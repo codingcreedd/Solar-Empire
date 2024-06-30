@@ -8,6 +8,7 @@ import Contact from './Components/Contact.jsx'
 import OurStory from './Components/OurStory.jsx'
 import Pricing from './Components/Pricing.jsx'
 import Cart from './Components/Cart/Cart.jsx'
+import Checkout from './Components/Checkout.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'checkout',
-    element: <Cart />,
+    element: <Checkout />,
     errorElement: <Error />
   }
 ])
