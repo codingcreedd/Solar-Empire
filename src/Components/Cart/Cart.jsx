@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Context } from "../Context";
 import { Link } from "react-router-dom";
 import MobileMenu from "../MobileMenu";
+import {v4 as uuid} from 'uuid'
 
 const Cart = () => {
 
@@ -24,7 +25,7 @@ const Cart = () => {
                 <div className="flex flex-col gap-5 flex-grow">
                     {
                         cart.map(product => (
-                            <div className="flex px-4">
+                            <div className="flex px-4" key={uuid()}>
                                 <img src={product.src} alt="product image" border="0" className="w-[100px] h-[100px] rounded-xl mr-10" />
 
                                 <div className="flex flex-col">

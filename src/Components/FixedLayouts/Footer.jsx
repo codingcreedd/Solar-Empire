@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center max-md:text-[0.8rem]">
-            Copyright &copy; 2024 Solar Empire All rights reserved. Made with Love By Marwan Moubayed
+            Copyright &copy; 2024 Solar Empire All rights reserved. Made by Marwan Moubayed
         </div>
 
     </footer>

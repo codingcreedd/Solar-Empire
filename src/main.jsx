@@ -8,7 +8,7 @@ import Contact from './Components/Contact.jsx'
 import OurStory from './Components/OurStory.jsx'
 import Pricing from './Components/Pricing.jsx'
 import Cart from './Components/Cart/Cart.jsx'
-import Checkout from './Components/Checkout.jsx'
+import Checkout from './Components/Checkout/Checkout.jsx'
 
 const router = createBrowserRouter([
   {

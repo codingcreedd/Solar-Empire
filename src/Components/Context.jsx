@@ -7,11 +7,17 @@ const ContextProvider = ({children}) => {
     const [totalAmount, setTotalAmount] = useState(0);
     const [openMenu, setOpenMenu] = useState(false);
 
+    const [formState, setFormState] = useState({
+      loading: false,
+      error: false
+    });
+
     const states = {
         cartCount, setCartCount,
         cart, setCart,
         totalAmount, setTotalAmount,
-        openMenu, setOpenMenu
+        openMenu, setOpenMenu,
+        formState, setFormState
     }
 
   return (

@@ -5,7 +5,7 @@ import MobileMenu from "./MobileMenu"
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center overflow-hidden">
         <MobileMenu />
         <Deals />
         <Nav />
